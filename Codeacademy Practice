@@ -5,6 +5,11 @@ def cost_of_ground_shipping(weight):
     price_per_pound = 1.50
   elif weight > 2 and weight <= 6:
     price_per_pound = 3.00
+  elif weightdef cost_of_ground_shipping(weight):
+  if weight <= 2:
+    price_per_pound = 1.50
+  elif weight > 2 and weight <= 6:
+    price_per_pound = 3.00
   elif weight > 6 and weight <= 10:
     price_per_pound = 4.00
   else:
@@ -28,7 +33,49 @@ def cost_of_drone_shipping(weight):
 
 print(cost_of_drone_shipping(1.5))
 
-def cheapest_shipping_method(weight):
+def print_cheapest_shipping_method(weight):
+  ground = cost_of_ground_shipping(weight)
+  premium = cost_premium_ground_shipping
+  drone = cost_of_drone_shipping(weight)
+  
+  if ground < premium and ground < drone:
+    method = "ground shipping"
+    cost = ground 
+  elif premium < ground and premium < drone:
+    method = "premium shipping" 
+    cost = premium
+  elif drone < ground and premium < ground:
+    method = "drone shipping" 
+    cost = drone
+  print(
+      "The cheappest method is % and required $%.2f."
+     % (method,cost)
+     )
+print_cheapest_shipping_method(4.8)
+print_cheapest_shipping_method(41.5) > 6 and weight <= 10:
+    price_per_pound = 4.00
+  else:
+    price_per_pound = 4.75
+  return price_per_pound * weight + 20
+
+print(cost_of_ground_shipping(8.4))
+
+cost_premium_ground_shipping = 125.00
+
+def cost_of_drone_shipping(weight):
+  if weight <= 2:
+    price_per_pound = 4.50
+  elif weight > 2 and weight <= 6:
+    price_per_pound = 9.00
+  elif weight > 6 and weight <= 10:
+    price_per_pound = 12.00
+  else:
+    price_per_pound = 14.25
+  return price_per_pound * weight
+
+print(cost_of_drone_shipping(1.5))
+
+def print_cheapest_shipping_method(weight):
   ground = cost_of_ground_shipping(weight)
   premium = cost_premium_ground_shipping
   drone = cost_of_drone_shipping(weight)
@@ -44,7 +91,7 @@ def cheapest_shipping_method(weight):
     cost = drone
     print(
       "The cheappest method is & and required $&.2f."
-     & (cost, method)
+     & (method,cost)
      )
 print_cheapest_shipping_method(4.8)
 print_cheapest_shipping_method(41.5)
