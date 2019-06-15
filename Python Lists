@@ -1,0 +1,30 @@
+def middle_element(lst):
+#*** Create a function (def variable) called 'middle_element'(def middle_element()) that has one parameter named 'lst'(def middle_element(lst)). #
+
+#*** If there are an even number of elements...
+  if len(lst) % 2 == 0:
+# This is to determine if this is an even or a odd number.
+# -- 'len', is used to count the numbers associated with the variable. In this case there is 6.
+# --- 6 % 2 == 0, this means anything left over will be the number shown. If it breaks even, its 0.
+# ---- 0 == 0:
+
+#*** the function should return ... the middle two elements. 
+    sum = lst[int(len(lst)/2)] + lst[int(len(lst)/2) - 1]
+# - sum is to create the variable.  The return will be able to simply divide it by 2.
+# -- to look at this simpler, its doing this 'sum = lst[ /2] + lst[] - 1'
+		# 'int' must be a number only.
+  	# 'len' means to determine the total series of numbers, in this case 6
+    # The int and len are taken into accountability for the 'lst' and it will be divided by two
+    # So therefore, lst[(6 / 2)] is 3.  Alas lst[3], 3 is -4 in the list.  
+# --- Finally, if you take the knowledge from the first one, and subtract the next one by 1, you get 2 and 3. Grand Total is lst[2] + lst[3]; or -10 + -4 = -14.
+
+#*** return the average of the middle two elements
+    return sum / 2
+# - return -14 / 2 = -7
+
+#*** If there are an odd number of elements in lst, the function should return the middle element. #
+  else:
+    return lst[int(len(lst)/2)]
+
+#Uncomment the line below when your function is done
+print(middle_element([5, 2, -10, -4, 4, 5]))
