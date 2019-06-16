@@ -1,0 +1,13 @@
+all_students = ["Alex", "Briana", "Cheri", "Daniele", "Dora", "Minerva", "Alexa", "Obie", "Arius", "Loki"]
+students_in_poetry = []
+#Therefore in this case list "students_in_poetry" is empty 
+
+while len(students_in_poetry) < 6:
+#This is giving a condition saying that while the list "students_in_poetry" is less than 6, we want to take the action below
+  student = all_students.pop()
+  students_in_poetry.append(student)
+#.pop() in this case representing taking the items out of the list 
+# variable = list.pop() if there is nothing in the (), then that is representing starting from -1 to delete the variables
+# And then students_in_poetry is increasing variables by taking from the list of all_students.
+  
+print(students_in_poetry)
